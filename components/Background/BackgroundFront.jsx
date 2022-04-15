@@ -16,7 +16,7 @@ export default function BackgroundFront() {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { duration: 4, ease: "linear" },
+          transition: { duration: 2, ease: "linear" },
         }}
         exit={{ opacity: 0, transition: { duration: 2 } }}
         style={{ position: "relative", width: "100%", height: "100vh" }}

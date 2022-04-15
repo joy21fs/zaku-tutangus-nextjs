@@ -6,11 +6,11 @@ export default function Man() {
   return (
     <div className={`${styles.man} man`}>
       <motion.div
-        initial={{ opacity: 0, scale: 0 }}
+        initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          scale: 1,
-          transition: { duration: 2, ease: "linear" },
+
+          transition: { duration: 2, ease: "linear", delay: 2 },
         }}
       >
         <Image
