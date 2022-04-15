@@ -15,6 +15,7 @@ export default function BackgroundBack() {
         style={{ position: "relative", width: "100%", height: "100vh" }}
       >
         <Image
+          priority
           className={styles.sky}
           src="/images/background/background1.png"
           alt="sky"
