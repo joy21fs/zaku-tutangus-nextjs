@@ -42,7 +42,7 @@
 .home-btn img:hover,
 .home-btn img:focus {
   background: radial-gradient(
-    7rem at 50% 90%,
+    6rem at 50% 90%,
     rgba(245, 240, 163, 1),
     transparent
   );
