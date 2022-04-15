@@ -134,16 +134,11 @@ nav.menu li:focus {
 
   .menu-btn .main-sun:hover,
   .menu-btn .main-sun:focus {
-    background: radial-gradient(
-      8.5rem at 50% 75%,
-      rgba(245, 240, 163, 1),
-      transparent
-    );
+    background: var(--sunshine);
     transform: scale(1.3);
   }
 
   nav.menu ul {
-    height: 88vh;
     justify-content: flex-start;
     gap: 1rem;
     margin-bottom: 4rem;
