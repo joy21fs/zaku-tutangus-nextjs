@@ -1,0 +1,57 @@
+div.wrapper--page-with-tabs {
+  grid-template-areas:
+    ". . ."
+    ". tab ."
+    ". main ."
+    ". . .";
+  grid-template-rows: clamp(6rem, 30vh, 15rem) 1fr 4fr 1fr;
+}
+
+.external-link {
+  color: red;
+}
+
+.option p,
+.option h2 {
+  padding-block: 0.8rem;
+}
+
+@supports (not (padding-block: 0.5rem)) {
+  .option p,
+  .option h2 {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 53em) {
+  div.wrapper--page-with-tabs {
+    height: 100vh;
+  }
+
+  main.about,
+  main.transportation {
+    padding-top: 0;
+    margin-top: -2rem;
+  }
+}
+
+@media (min-width: 35em) {
+  div.wrapper--page-with-tabs {
+    grid-template-rows: clamp(6rem, 30vh, 20rem) 1fr 4fr 1fr;
+  }
+}
+
+@media (min-width: 53em) {
+  div.wrapper--page-with-tabs {
+    grid-template-areas:
+      ". nav tab ."
+      ". nav main .";
+    grid-template-rows: 1fr 3fr;
+  }
+
+  div.wrapper--page-with-tabs #about,
+  div.wrapper--page-with-tabs #transportation {
+    height: 100%;
+  }
+}

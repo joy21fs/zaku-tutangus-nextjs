@@ -1,0 +1,133 @@
+/* tab nav  */
+.tab-nav {
+  grid-area: tab;
+  width: 100%;
+}
+
+.tablist {
+  width: 100%;
+  border-top: var(--decor-line);
+  border-bottom: var(--decor-line);
+  padding-block: 1rem;
+  column-gap: 0;
+  row-gap: 1rem;
+}
+
+@supports (not (padding-block: 1rem)) {
+  .tablist {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.tab-link {
+  position: relative;
+}
+
+.tab-link::after {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  z-index: -1;
+  box-shadow: 0 0 1.2rem 0.75rem var(--clr-sun-ray);
+  transition: all 500ms linear;
+}
+
+.tab-link.active::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* tab nav -- about page */
+.tablist--about {
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.tab--about:nth-child(1) {
+  grid-area: 1/2/1/9;
+}
+
+.tab--about:nth-child(2) {
+  grid-area: 2/1/2/5;
+}
+
+.tab--about:nth-child(3) {
+  grid-area: 2/6/2/10;
+}
+
+/* tab nav -- transportation page */
+.tablist--transportation {
+  grid-template-areas:
+    "tab1 tab2"
+    "tab3 tab4";
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.5rem;
+  z-index: 1;
+}
+
+.tab--transportation:nth-child(1) {
+  grid-area: tab1;
+}
+
+.tab--transportation:nth-child(2) {
+  grid-area: tab2;
+}
+
+.tab--transportation:nth-child(3) {
+  grid-area: tab3;
+}
+
+.tab--transportation:nth-child(4) {
+  grid-area: tab4;
+}
+
+@media (max-width: 53em) {
+  .tab-nav {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 35em) {
+  /* tab nav -- about page */
+  .tab-link::after {
+    box-shadow: 0 0 1.2rem 1.25rem var(--clr-sun-ray);
+  }
+
+  /* tab nav -- transportation page */
+  .tablist--transportation {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 0;
+  }
+  .tab--transportation:nth-child(1) {
+    grid-area: 1/1/1/5;
+  }
+  .tab--transportation:nth-child(2) {
+    grid-area: 1/6/1/10;
+  }
+
+  .tab--transportation:nth-child(3) {
+    grid-area: 2/4/2/8;
+  }
+
+  .tab--transportation:nth-child(4) {
+    grid-area: 2/9/2/13;
+  }
+}
+
+@media (min-width: 53em) {
+  .tablist {
+    padding-block: 1.5rem;
+  }
+
+  @supports (not (padding-block: 1.5rem)) {
+    .tablist {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+}

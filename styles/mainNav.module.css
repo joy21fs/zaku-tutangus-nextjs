@@ -1,0 +1,161 @@
+div.wrapper.wrapper--menu {
+  pointer-events: none;
+  height: 100vh;
+}
+
+div.wrapper.wrapper--menu > * {
+  pointer-events: auto;
+}
+
+/* menu nav */
+.menu-btn {
+  opacity: 1;
+  transition: all 1500ms ease-in;
+}
+
+.menu-btn img {
+  width: 100%;
+}
+
+nav.menu {
+  height: 100%;
+  position: absolute;
+  justify-content: center;
+}
+
+nav.menu ul {
+  height: 70vh;
+  align-items: center;
+  justify-content: space-around;
+  --gap: 0rem;
+}
+
+nav.menu li {
+  height: 25%;
+  opacity: 0.4;
+  transform: scale(0.8);
+  transition: opacity 300ms ease-in, scale 500ms ease-in-out;
+  margin-block: -1rem;
+}
+
+@supports (not (margin-block: -1rem)) {
+  nav.menu li {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+}
+
+nav.menu li:hover,
+nav.menu li:focus {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.nav-link {
+  height: 100%;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--clr-sun-ray);
+  /* background-image: url("images/sun.png");
+  background-size: cover;
+  background-position: top center; */
+}
+
+.nav-link img {
+  object-fit: contain;
+  height: 100%;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  background: var(--sunshine);
+}
+
+.main-btn {
+  border: none;
+  background-color: transparent;
+}
+
+@media (max-width: 53em) {
+  .menu-btn {
+    width: 88vw;
+    position: fixed;
+    bottom: -0.5rem;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  .menu-btn .main-sun:hover,
+  .menu-btn .main-sun:focus {
+    background: radial-gradient(
+      30vw at 50% 90%,
+      rgba(245, 240, 163, 1),
+      transparent
+    );
+    transform: scale(1.1);
+  }
+
+  nav.menu {
+    grid-area: main;
+    transform-origin: bottom;
+    left: 0;
+    top: 50%;
+    transform: scale(0) translateY(-50%);
+  }
+}
+
+@media (min-width: 53em) {
+  .wrapper.grid.wrapper--homepage .wrapper--menu nav.menu {
+    grid-area: main;
+    left: -2rem;
+  }
+
+  .menu-btn {
+    position: absolute;
+    width: 17.6vw;
+    left: 11vw;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .menu-btn .main-sun:hover,
+  .menu-btn .main-sun:focus {
+    background: var(--sunshine);
+    transform: scale(1.3);
+  }
+
+  nav.menu ul {
+    height: 88vh;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  nav.menu li {
+    width: 120%;
+    height: 25%;
+    opacity: 0.4;
+    transform: scale(0.8);
+    transition: opacity 300ms ease-in, transform 500ms ease-in-out;
+    margin-block: -1.2rem;
+  }
+
+  @supports (not (margin-block: -1.2rem)) {
+    nav.menu li {
+      margin-top: -1.2rem;
+      margin-bottom: -1.2rem;
+    }
+  }
+}

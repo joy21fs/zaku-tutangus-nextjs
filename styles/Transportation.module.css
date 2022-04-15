@@ -1,0 +1,323 @@
+.transportation {
+  --gap: 0.5rem;
+}
+
+/* toggle information section */
+.toggle-container {
+  width: 80vw;
+  height: 88vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  place-items: center;
+  pointer-events: none;
+}
+
+.toggle-container > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: contain;
+  object-position: center;
+  cursor: zoom-out;
+  transition: transform 300ms ease-in-out;
+}
+
+/* public transportation  */
+/* general */
+
+.container {
+  place-items: center;
+}
+
+.container--route {
+  --gap: 0;
+}
+
+.subheader {
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5ch 3ch;
+  font-size: inherit;
+  font-weight: 300;
+}
+
+.line {
+  height: 4rem;
+  border: none;
+  border-left: 3px solid black;
+}
+
+.container p.instruction {
+  text-align: center;
+}
+
+/* icons */
+
+.train {
+  width: 50%;
+}
+
+button.transportation-icon {
+  height: 4rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1;
+}
+
+.container--busTerminal .transportation-icon,
+.shuttle-bus {
+  width: 60%;
+}
+
+.container--busTerminal .transportation-icon {
+  margin-block: 0.5rem;
+}
+
+@supports (not (margin-block: 0.5rem)) {
+  .container--busTerminal .transportation-icon {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* header */
+.container--route-header {
+  place-items: center;
+  --gap: 0;
+}
+
+/* train options container */
+
+.container--train-option {
+  margin-top: 1.5rem;
+  --gap: 0.8rem;
+}
+
+/* .train-station-btn,
+.container--line-btn {
+  transform: scale(1);
+  transition: all 800ms linear;
+}
+
+.train-station-btn.smooth-transit[data-isclicked="false"],
+.container--line-btn.smooth-transit[data-isclicked="false"] {
+  transform: scale(0);
+} */
+
+/* option container */
+.container--line-btn,
+.container--btn-option,
+.container--option {
+  transform-origin: top;
+}
+
+.container.taxi,
+.container--shuttle-bus {
+  margin-bottom: 1.5rem;
+}
+
+/* .container--btn-option,
+.container--option {
+  transform: scale(0);
+  transition: all 800ms linear 1700ms;
+}
+
+.container--btn-option.show,
+.container--option.show {
+  transform: scale(1);
+} */
+
+.taxi-btn {
+  background-image: url("../public/images/交通資訊/taxi_icon.png");
+}
+
+.bus-btn {
+  background-image: url("../public/images/交通資訊/bus_icon.png");
+}
+
+.container--option.bus,
+.container--bus-line {
+  --gap: 0.5rem;
+}
+
+.container--option.bus,
+.contact {
+  background-color: var(--bg-clr-bus);
+  border-radius: 10px;
+  padding: 1rem 0.7rem;
+}
+
+/* taxi container */
+p.instruction.contact {
+  margin: 0.5rem;
+}
+
+/* bus terminal container */
+
+.container--busTerminal .line {
+  height: 2rem;
+}
+
+/* bus container */
+.container--option.bus > p.instruction {
+  width: 109%;
+}
+
+.bus-line {
+  color: var(--clr-bus-num);
+  width: min-content;
+  padding: 0.2ch 1.5ch;
+}
+
+.bus-line:nth-child(1) {
+  background-color: var(--bus-8161);
+}
+
+.bus-line:nth-child(2) {
+  background-color: var(--bus-8163);
+}
+
+.bus-line:nth-child(3) {
+  background-color: var(--bus-8167);
+}
+
+.transportation-link {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  color: black;
+}
+
+.transportation-link::after {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  width: 300%;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 300ms ease-in-out;
+}
+
+.route1-link1::after {
+  background-image: url("../public/images/交通資訊/圖1關山站牌位置圖.jpg");
+}
+
+.route1-link2::after {
+  background-image: url("../public/images/交通資訊/圖2關山到武陵時間表.jpg");
+}
+
+.route2-link1::after {
+  background-image: url("../public/images/交通資訊/圖3鹿野站牌位置.jpg");
+}
+
+.route2-link2::after {
+  background-image: url("../public/images/交通資訊/圖4公車時刻表鹿野到武陵.jpg");
+}
+
+.route3-link2::after {
+  background-image: url("../public/images/交通資訊/圖5公車時刻台東到武陵.jpg");
+}
+
+.landscape {
+  width: 100%;
+}
+
+/* shuttle bus container */
+
+.shuttle-bus-header {
+  color: var(--shuttle-bus-green);
+  margin-bottom: 0.5rem;
+}
+
+.route-instruction.shuttle-bus {
+  text-align: center;
+  width: 100%;
+}
+
+.return-btn {
+  background-image: url("../public/images/交通資訊/undo.png");
+  background-size: contain;
+  width: 2rem;
+  aspect-ratio: 1;
+}
+
+/* by self  or shuttle bus             */
+
+.by-self ul {
+  margin-left: 2rem;
+}
+
+.by-self li {
+  list-style-type: "※ ";
+  text-align: left;
+}
+
+.toggleImg {
+  cursor: zoom-in;
+}
+
+.option-container {
+  --gap: 0;
+  width: 100%;
+}
+
+@supports (not (aspect-ratio: 1)) {
+  button.transportation-icon {
+    width: 4rem;
+  }
+
+  .return-btn {
+    height: 2rem;
+  }
+}
+
+/************* RWD **************/
+@media (max-width: 53em) {
+  .portrait {
+    width: 100%;
+  }
+}
+
+@media (min-width: 35em) {
+  .tablist--transportation.grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 0;
+  }
+  .tab--transportation:nth-child(1) {
+    grid-area: 1/1/1/5;
+  }
+  .tab--transportation:nth-child(2) {
+    grid-area: 1/6/1/10;
+  }
+
+  .tab--transportation:nth-child(3) {
+    grid-area: 2/4/2/8;
+  }
+
+  .tab--transportation:nth-child(4) {
+    grid-area: 2/9/2/13;
+  }
+}
+
+@media (min-width: 53em) {
+  .transportation h1 {
+    margin-bottom: 2rem;
+  }
+
+  .transportation-link:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 2;
+  }
+}

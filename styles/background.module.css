@@ -1,0 +1,32 @@
+.background-layer {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  opacity: 0.1;
+  opacity: 1;
+  transition: opacity 2500ms ease-in-out;
+  pointer-events: none;
+}
+
+.img-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 35em) {
+  .right-trunk {
+    right: -1.5rem;
+  }
+
+  @media (max-aspect-ratio: 14/25) {
+    .right {
+      right: -1.5rem;
+    }
+
+    .right-trunk.right {
+      right: -5rem;
+    }
+  }
+}

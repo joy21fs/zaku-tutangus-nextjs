@@ -1,0 +1,17 @@
+@font-face {
+  font-family: oradano-mincho-gsrr;
+  src: url("../public/fonts/OradanoGSRR.ttf");
+}
+
+@font-face {
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../public/fonts/NotoSansTC-Light.woff2");
+}
+@font-face {
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../public/fonts/NotoSansTC-Medium.woff2");
+}

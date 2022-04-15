@@ -1,0 +1,10 @@
+.option p {
+  padding-block: 0.8rem;
+}
+
+@supports (not (padding-block: 0.5rem)) {
+  .option p {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+}
