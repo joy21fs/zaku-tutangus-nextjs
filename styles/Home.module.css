@@ -87,12 +87,6 @@
 
 @media (min-width: 35em) {
   main.main--homepage {
-    max-width: 35vw;
-  }
-}
-
-@media (min-width: 53em) {
-  main.main--homepage {
     margin-top: -2rem;
     max-width: 40vw;
   }
