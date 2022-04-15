@@ -87,3 +87,15 @@
     max-width: 40vw;
   }
 }
+
+@media (min-width: 53em) {
+  .home-btn img:hover,
+  .home-btn img:focus {
+    background: radial-gradient(
+      12.5rem at 50% 90%,
+      rgba(245, 240, 163, 1),
+      transparent
+    );
+    transform: scale(1.1);
+  }
+}
