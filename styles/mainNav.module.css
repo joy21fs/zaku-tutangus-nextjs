@@ -121,21 +121,8 @@ nav.menu li:focus {
 @media (min-width: 35em) {
   .menu-btn .main-sun:hover,
   .menu-btn .main-sun:focus {
-    background: radial-gradient(
-      4.5rem at 50% 60%,
-      rgba(245, 240, 163, 1),
-      transparent
-    );
+    background: var(--sunshine);
     transform: scale(1.3);
-  }
-
-  .nav-link:hover::after,
-  .nav-link:focus::after {
-    background: radial-gradient(
-      4.5rem at 50% 50%,
-      rgba(245, 240, 163, 1),
-      transparent
-    );
   }
 }
 
