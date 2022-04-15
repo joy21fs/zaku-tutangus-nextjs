@@ -53,6 +53,8 @@ nav.menu li:focus {
 
 .nav-link {
   height: 100%;
+  width: 80%;
+  margin: auto;
   position: relative;
   font-size: 1.5rem;
   font-weight: 500;
@@ -89,7 +91,7 @@ nav.menu li:focus {
 
 @media (max-width: 53em) {
   .menu-btn {
-    width: 88vw;
+    width: 60vw;
     position: fixed;
     bottom: -0.5rem;
     left: 50%;
