@@ -6,7 +6,7 @@ import BackgroundBack from "./Background/BackgroundBack";
 import BackgroundFront from "./Background/BackgroundFront";
 import Nav from "./MainNav/Nav";
 import styles_Home from "../styles/Home.module.css";
-const styles_u = dynamic(() => import("../styles/contentPages.module.css"));
+import styles_u from "../styles/contentPages.module.css";
 import styles_t from "../styles/pagesWithTabs.module.css";
 import getImages from "../lib/GetImages";
 const ToggleInfo = dynamic(() =>
