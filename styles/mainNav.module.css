@@ -13,11 +13,6 @@ div.wrapper.wrapper--menu > * {
   transition: all 1500ms ease-in;
 }
 
-.main-sun {
-  position: absolute;
-  bottom: -5px;
-}
-
 .menu-btn img {
   width: 100%;
 }
@@ -98,7 +93,7 @@ nav.menu li:focus {
   .menu-btn {
     width: 60vw;
     position: fixed;
-    bottom: 0;
+    bottom: -5px;
     left: 50%;
     transform-origin: bottom center;
     transform: translate(-50%, 0) scale(1);
