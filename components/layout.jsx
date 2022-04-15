@@ -39,6 +39,8 @@ export default function Layout({ children }) {
       <Head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <title>Zaku Tutangus布農原森音樂祭</title>
         {router.pathname !== "/" && (
           <>
