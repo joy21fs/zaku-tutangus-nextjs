@@ -132,7 +132,7 @@ nav.menu li:focus {
   .nav-link:hover::after,
   .nav-link:focus::after {
     background: radial-gradient(
-      3.5rem at 50% 35%,
+      3.5rem at 50% 50%,
       rgba(245, 240, 163, 1),
       transparent
     );
