@@ -88,6 +88,6 @@
 @media (min-width: 53em) {
   main.main--homepage {
     margin-top: -2rem;
-    max-width: 40vw;
+    max-width: 30vw;
   }
 }
