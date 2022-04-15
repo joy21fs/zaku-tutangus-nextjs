@@ -77,11 +77,12 @@
 
   .man {
     grid-area: man;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     position: absolute;
     object-fit: contain;
     bottom: -5.5rem;
+    bottom: 0;
   }
 }
 
