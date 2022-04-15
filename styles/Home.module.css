@@ -42,7 +42,7 @@
 .home-btn img:hover,
 .home-btn img:focus {
   background: radial-gradient(
-    12.5rem at 50% 90%,
+    8.5rem at 50% 90%,
     rgba(245, 240, 163, 1),
     transparent
   );
@@ -68,11 +68,7 @@
 
   .home-btn img:hover,
   .home-btn img:focus {
-    background: radial-gradient(
-      6.5rem at 50% 90%,
-      rgba(245, 240, 163, 1),
-      transparent
-    );
+    background: var(--sunshine);
   }
 
   .man {
