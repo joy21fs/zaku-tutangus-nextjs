@@ -93,7 +93,7 @@ nav.menu li:focus {
   .menu-btn {
     width: 60vw;
     position: fixed;
-    bottom: -0.5rem;
+    bottom: -5px;
     left: 50%;
     transform-origin: bottom center;
     transform: translate(-50%, 0) scale(1);

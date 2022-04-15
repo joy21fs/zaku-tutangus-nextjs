@@ -24,19 +24,27 @@ export default function Home() {
         exit={{ opacity: 0 }}
         transition={{ ease: "linear", duration: 0.5 }}
       >
-        <Image
-          src="/images/我來領唱__字.png"
-          alt="我來領唱"
-          width={554}
-          height={132}
-        />
+        <div style={{ width: "100%", marginBottom: "-5px" }}>
+          <Image
+            src="/images/我來領唱__字.png"
+            alt="我來領唱"
+            width={554}
+            height={132}
+            // layout="fill"
+            // objectFit="contain"
+          />
+        </div>
         <MainSun />
-        <Image
-          src="/images/布農原森音樂祭 字.png"
-          alt="布農原森音樂祭"
-          width={554}
-          height={146}
-        />
+        <div style={{ width: "100%", marginTop: "10px" }}>
+          <Image
+            src="/images/布農原森音樂祭 字.png"
+            alt="布農原森音樂祭"
+            width={554}
+            height={146}
+            // layout="fill"
+            // objectFit="contain"
+          />
+        </div>
       </motion.main>
       {value < 848 && <Man />}
     </>
