@@ -118,6 +118,20 @@ nav.menu li:focus {
   }
 }
 
+@media (min-width: 35em) {
+  .menu-btn .main-sun:hover,
+  .menu-btn .main-sun:focus,
+  .nav-link:hover::after,
+  .nav-link:focus::after {
+    background: radial-gradient(
+      5rem at 50% 60%,
+      rgba(245, 240, 163, 1),
+      transparent
+    );
+    transform: scale(1.3);
+  }
+}
+
 @media (min-width: 53em) {
   .wrapper.grid.wrapper--homepage .wrapper--menu nav.menu {
     grid-area: main;
@@ -133,7 +147,9 @@ nav.menu li:focus {
   }
 
   .menu-btn .main-sun:hover,
-  .menu-btn .main-sun:focus {
+  .menu-btn .main-sun:focus,
+  .nav-link:hover::after,
+  .nav-link:focus::after {
     background: var(--sunshine);
     transform: scale(1.3);
   }
