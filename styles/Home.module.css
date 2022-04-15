@@ -57,7 +57,7 @@
       "man man man";
     grid-template-columns: 1fr clamp(65%, 60vw, 80%) 1fr;
     grid-template-rows: 6rem 1fr 1fr;
-    height: 100vh;
+    height: 100%;
   }
 
   main.main--homepage {

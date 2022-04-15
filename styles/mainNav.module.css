@@ -1,6 +1,6 @@
 div.wrapper.wrapper--menu {
   pointer-events: none;
-  height: 100vh;
+  height: 100%;
 }
 
 div.wrapper.wrapper--menu > * {

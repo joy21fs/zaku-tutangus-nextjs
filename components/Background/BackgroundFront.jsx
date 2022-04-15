@@ -19,7 +19,7 @@ export default function BackgroundFront() {
           transition: { duration: 2, ease: "linear" },
         }}
         exit={{ opacity: 0, transition: { duration: 2 } }}
-        style={{ position: "relative", width: "100%", height: "100vh" }}
+        style={{ position: "relative", width: "100%", height: "100%" }}
       >
         {/* <!------------------ left --------------------------> */}
 
@@ -42,15 +42,6 @@ export default function BackgroundFront() {
         />
 
         {/* <!------------------ right --------------------------> */}
-
-        <Image
-          priority
-          src="/images/background/bushleaves&topbranch_right.png"
-          alt="bush,leaves and top-branch on the right"
-          layout="fill"
-          objectFit={value < 848 ? "cover" : "contain"}
-          objectPosition="right bottom"
-        />
         <div
           className={`${styles["img-wrapper"]} ${styles["right-trunk"]} ${styles["right"]}`}
           style={{ position: "relative", width: "100%", height: "100vh" }}
@@ -64,6 +55,14 @@ export default function BackgroundFront() {
             objectPosition={"right bottom"}
           />
         </div>
+        <Image
+          priority
+          src="/images/background/bushleaves&topbranch_right.png"
+          alt="bush,leaves and top-branch on the right"
+          layout="fill"
+          objectFit={value < 848 ? "cover" : "contain"}
+          objectPosition="right bottom"
+        />
       </motion.div>
     </div>
   );
