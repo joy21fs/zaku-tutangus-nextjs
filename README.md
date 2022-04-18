@@ -13,7 +13,6 @@
 
 ### Links
 
-- Solution URL: https://github.com/joy21fs/zaku-tutangus-nextjs
 - Live Site URL: https://zaku-tutangus.vercel.app/
 
 ## My process
