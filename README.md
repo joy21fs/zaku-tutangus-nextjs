@@ -64,8 +64,8 @@ I first used React and React-Router-Dom to build this project, then to find the 
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- React
-- Next.js
+- React (React components, useEffect and useState Hooks)
+- Next.js (Head, Images, useRouter, useStaticProps etc.)
 - Framer Motion
     
 ### Useful resources
