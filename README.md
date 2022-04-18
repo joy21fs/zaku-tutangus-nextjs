@@ -1,7 +1,7 @@
 ## Table of contents
 
 - [Overview](#overview)
-  - [Screenshots](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
