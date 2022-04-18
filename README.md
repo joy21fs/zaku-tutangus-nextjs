@@ -1,34 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Table of contents
 
-## Getting Started
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Links
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Solution URL: https://github.com/joy21fs/zaku-tutangus-nextjs
+- Live Site URL: https://zaku-tutangus.vercel.app/
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## My process
+I first used React and React-Router-Dom to build this project, then to find the image files for the background design are too huge that they slow down page load. After digging into how to improve this issue, I learned more about client-side-rendering vs. server-side-rendering and decided to transfer my project to using Next.js.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### What I learned
 
-## Learn More
+**CSS**
 
-To learn more about Next.js, take a look at the following resources:
+- Styling scrollbar by using the pseudo element ::-webkit-scrollbar
+- Adding the { behavior: "smooth" } option to scrollIntoView for smooth scrolling animation
+  e.g., document.querySelector("main").scrollIntoView({ behavior: "smooth" })
+- Styling list items with list-style-type (e.g., none, decimals etc.) & list-style-position (e.g., inside, outside)
+-  Pointer-events: none to target elements behind the front layer
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Improving Page Loading Speed**
+- CSR vs SSR vs SSG
+- LCP
+- responsive image sizes
+- Web hosting vs Self-hosting Fonts
+**Next.js**
+- Using the "priority" property on any image detected as the Largest Contentful Paint (LCP) element.
+- When we wish to style the <Image/> we wrap the <Image/> around an parent element and style the parent element as next.js's <Image/> has some built-in stylings that will overwrite our custom styling
+- the files in pages folder directly serve as routes
+- CSS modules
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Framer Motion**
+- Animtate Presence & <motion.div>s
 
-## Deploy on Vercel
+**Other**
+- require.context to import images at once react
+- Framer motion for removing or adding element to DOM tree with animation
+- Open link in new tab (target="_blank") taking care of risk with rel="nooperner noreferrer" instructs the browser to open the link without granting the new browsing context access to the document that opened it e.g., <a
+                  className={`${styles_t["external-link"]}`}
+                  href={option.info}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ cursor: "pointer" }}
+                >
+                  網頁連結
+                </a>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- React
+- Next.js
+- Framer Motion
+    
+### Useful resources
+
+- Next.js Documentation: https://nextjs.org/docs/basic-features/image-optimization
+- Framer Motion Documentation: https://www.framer.com/docs/animation/
+- Webpack Dependency Documentation (on require.context): https://webpack.js.org/guides/dependency-management/#requirecontext
+- MDN Documentation on Link Types: https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types
+    
+    
+### Screenshots
+
+![officially-online](https://user-images.githubusercontent.com/95619834/163787614-5ffe6b6e-8171-40d7-b104-e08097801e10.PNG)
+![demo1](https://user-images.githubusercontent.com/95619834/163788458-8ca9c296-ad45-4563-a361-675298f3f5ab.gif)
+![demo2](https://user-images.githubusercontent.com/95619834/163788525-85f31810-4e9d-4734-b52c-21a61d852820.gif)
+![demo_transportation](https://user-images.githubusercontent.com/95619834/163787667-223c8d99-3f1b-447b-95af-b7bf493aab6c.gif)
+
