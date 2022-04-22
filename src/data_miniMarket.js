@@ -7,11 +7,6 @@ const data = [
     title_en: "mini-market",
     content: [
       {
-        vendor: "攤商介紹陸續增加中",
-        imageURLs: [],
-        intro: [],
-      },
-      {
         vendor: "日出禾作",
         imageURLs: [
           "日出禾作/烤麻糬.jpg",
