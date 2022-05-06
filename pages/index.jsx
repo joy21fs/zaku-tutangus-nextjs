@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import useWindowWidth from "../lib/useWindowWidth";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -8,15 +8,11 @@ import MainSun from "../components/MainSun";
 import Man from "../components/Man";
 
 export default function Home() {
-  const [value, setValue] = useState(
-    useEffect(() => {
-      setValue(window.innerWidth);
-    }, [])
-  );
+  const width = useWindowWidth();
 
   return (
     <>
-      {value > 848 && <Nav />}
+      {width > 848 && <Nav />}
       <motion.main
         className={`${styles["main--homepage"]} main--homepage flex`}
         initial={{ opacity: 0 }}
@@ -46,7 +42,7 @@ export default function Home() {
           />
         </div>
       </motion.main>
-      {value < 848 && <Man />}
+      {width < 848 && <Man />}
     </>
   );
 }

@@ -4,26 +4,23 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import styles_Home from "../styles/Home.module.css";
 import styles_Nav from "../styles/mainNav.module.css";
+import useWindowWidth from "../lib/useWindowWidth";
 
 export default function MainSun() {
   const router = useRouter();
 
-  const [value, setValue] = useState(
-    useEffect(() => {
-      setValue(window.innerWidth);
-    }, [])
-  );
+  const width = useWindowWidth();
 
   function handleClick() {
     if (router.pathname === "/") {
       document.querySelector(".main--homepage").classList.add("hide");
 
-      if (value < 560) {
+      if (width < 560) {
         document.querySelector(".man").classList.add("hide");
       }
     } else {
       document.querySelector(".menu-btn").classList.toggle("collapse");
-      if (value < 848) {
+      if (width < 848) {
         if (
           (router.pathname === "/about") |
           (router.pathname === "/transportation")

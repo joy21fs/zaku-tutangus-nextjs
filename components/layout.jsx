@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import useWindowWidth from "../lib/useWindowWidth";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
@@ -9,6 +9,7 @@ import styles_Home from "../styles/Home.module.css";
 import styles_u from "../styles/contentPages.module.css";
 import styles_t from "../styles/pagesWithTabs.module.css";
 import getImages from "../lib/GetImages";
+
 const ToggleInfo = dynamic(() =>
   import("./PagesWithTabs/TransportationPage/ToggleInfo")
 );
@@ -16,15 +17,11 @@ const ToggleInfo = dynamic(() =>
 export default function Layout({ children }) {
   const router = useRouter();
 
-  const [value, setValue] = useState(
-    useEffect(() => {
-      setValue(window.innerWidth);
-    }, [])
-  );
+  const width = useWindowWidth();
 
   const mainNav = () => {
     if (router.pathname === "/") {
-      if (value < 848) {
+      if (width < 848) {
         return <Nav />;
       }
     } else {
@@ -41,6 +38,10 @@ export default function Layout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta
+          name="google-site-verification"
+          content="_qkYbyc36wIe6E-3C997fmcqCaHOztVBPjQttl4sJyE"
+        />
         <title>Zaku Tutangus布農原森音樂祭</title>
         {router.pathname !== "/" && (
           <>
