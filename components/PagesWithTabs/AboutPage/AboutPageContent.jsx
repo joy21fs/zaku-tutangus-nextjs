@@ -33,19 +33,17 @@ export default function AboutPageContent(props) {
             </a>
           </h2>
         )}
-        {index !== 2 && (
-          <Image
-            priority
-            src={
-              index === 0
-                ? props.album["布農音樂祭__台東縣政府0408.webp"]
-                : props.album["ticket_info.png"]
-            }
-            alt={content.subTitle}
-            width={index === 0 ? 1024 : 1417}
-            height={index === 0 ? 1447 : 1063}
-          />
-        )}
+        <Image
+          priority
+          src={
+            index === 0
+              ? props.album["布農音樂祭__台東縣政府0408.webp"]
+              : index === 1
+              ? props.album["ticket_info.png"]
+              : props.album["節目流程.jpg"]
+          }
+          alt={content.subTitle}
+        />
 
         {content.info.map((option, index) =>
           content.id !== "tickets" ? (
