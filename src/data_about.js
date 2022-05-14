@@ -55,7 +55,7 @@ const data = [
         id: "program-list",
         subtitle: "節目表",
         tabLink: "about_tab3.png",
-        image: "",
+        image: "節目流程.jpg",
         info: ["*節目表將依現場狀況異動，主辦單位保有更動權利"],
       },
     ],
