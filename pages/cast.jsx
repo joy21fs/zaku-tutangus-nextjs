@@ -25,15 +25,13 @@ export default function Cast({ data }) {
           className={`cast flex content-container
             ${styles_u["content-container"]} `}
         >
-          {cast.image && (
-            <Image
-              priority
-              src={images[cast.image]}
-              alt={cast.artist}
-              width={674}
-              height={455}
-            />
-          )}
+          <Image
+            priority
+            src={images[cast.image]}
+            alt={cast.artist}
+            width={674}
+            height={455}
+          />
 
           <h1 className="artist-name">{cast.artist}</h1>
           <div className="cast-bio flow">
