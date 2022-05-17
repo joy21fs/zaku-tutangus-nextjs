@@ -35,13 +35,7 @@ export default function AboutPageContent(props) {
         )}
         <Image
           priority
-          src={
-            index === 0
-              ? props.album["布農音樂祭__台東縣政府0408.webp"]
-              : index === 1
-              ? props.album["ticket_info.png"]
-              : props.album["節目流程.jpg"]
-          }
+          src={props.album[content.image]}
           alt={content.subTitle}
         />
 
