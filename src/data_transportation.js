@@ -192,7 +192,7 @@ const data = [
         id: "site-map",
         subtitle: "音樂祭地圖",
         tabLink: "transportation_tab4.png",
-        info: [""],
+        image: "音樂祭地圖.jpg",
       },
     ],
   },
