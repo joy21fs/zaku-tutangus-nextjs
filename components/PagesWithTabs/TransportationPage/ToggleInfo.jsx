@@ -35,6 +35,10 @@ export default function ToggleInfo(props) {
       id: "drivers-map",
       image: props.album["自行開車路線.jpg"],
     },
+    {
+      id: "site-map",
+      image: props.album["音樂祭地圖.jpg"],
+    },
   ];
 
   function handleClick(event) {
